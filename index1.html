@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.js" integrity="sha512-VJ6+sp2E5rFQk05caiXXzQd1wBABpjEj1r5kMiLmGAAgwPItw1YpqsCCBtq8Yr1x6C49/mTpRdXtq8O2RcZhlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+    <p>Hello world!1</p>
+
+    <script>
+        // Connect to the Socket.IO server
+        var socket = io();
+
+        // Listen for 'message' events from the server
+        socket.on('message', function(data){
+            // Append the received message to the body
+            var p = document.createElement('p');
+            p.textContent = data;
+            document.body.appendChild(p);
+        });
+    </script>
+
+</body>
+</html>
