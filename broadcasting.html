@@ -1,0 +1,13 @@
+ <!DOCTYPE html>
+<html>
+   <head><title>Hello world</title></head>
+   <script src="/socket.io/broadcasting_app.js"></script>
+   <script>
+      var socket = io();
+      socket.on('broadcast',function(data){
+         document.body.innerHTML = '';
+         document.write(data.description);
+      });
+   </script>
+   <body>Socket.io</body>
+</html>

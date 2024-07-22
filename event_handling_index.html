@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+   <head><title>Hello world</title></head>
+   <script src="/socket.io/event_handling_node.js"></script>
+   <script>
+      var socket = io();
+      socket.on('message', function(data){document.write(data)});
+   </script>
+   <body>Socket.io</body>
+</html>

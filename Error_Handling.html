@@ -1,0 +1,13 @@
+ <!DOCTYPE html>
+<html>
+   <head><title>Hello world</title></head>
+   <script src="/socket.io/Error_Handling.js"></script>
+   <script>
+      var socket = io();
+      socket.on('connectToRoom',function(data){
+         document.body.innerHTML = '';
+         document.write(data);
+      });
+   </script>
+   <body>Error Handling</body>
+</html>
